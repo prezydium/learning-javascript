@@ -53,3 +53,31 @@ function exerciseThree(){
 	console.log(chessboard);
 	console.log("FINISHED");
 }
+function minimum(a, b){
+	if(a <= b) return a;
+	if(a > b)return b;	
+}
+
+function isEvenExercise(number){	
+	if(number == 0){
+		return true;
+	} else if(number == 1){
+		return false;
+	} else{
+		return isEven(number - 2);
+	}
+}
+
+function isEvenBetter(number){	
+	return(number % 2 == 0);
+}
+
+function countBs(word){
+	let count = 0;
+	for(int i = 0; i < word.length; i++){
+		if (word[i] == "B"){
+			count++;
+		}
+	}
+	return count;
+}
