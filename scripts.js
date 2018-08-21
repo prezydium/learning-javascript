@@ -72,12 +72,34 @@ function isEvenBetter(number){
 	return(number % 2 == 0);
 }
 
-function countBs(word){
+function countChars(word, letter){
 	let count = 0;
-	for(int i = 0; i < word.length; i++){
-		if (word[i] == "B"){
+	for(let i = 0; i < word.length; i++){
+		if (word[i] == letter){
 			count++;
 		}
 	}
 	return count;
+}
+
+function range(min, max,step = 1){
+	let arr = [];
+  if (step > 0){
+	for(let i = min; i <= max; i += step){
+			arr.push(i)
+		}
+  	} else {
+  		for (let i = min; i >= max; i += step){
+			arr.push(i)
+		}
+ 	}
+	return arr;
+}
+
+function sum(arr){
+	let summed = 0;
+  	for (let a of arr){
+    	summed += a;
+    }
+	return summed;
 }
